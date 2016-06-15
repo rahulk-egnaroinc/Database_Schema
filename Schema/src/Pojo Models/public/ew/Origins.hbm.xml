@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.Origins" table="origins" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="domain" type="string">
+            <column name="domain" not-null="true" />
+        </property>
+        <property name="referral" type="string">
+            <column name="referral" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <set name="contributionses" table="contributions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="origin_id" />
+            </key>
+            <one-to-many class="ew.Contributions" />
+        </set>
+        <set name="projectses" table="projects" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="origin_id" />
+            </key>
+            <one-to-many class="ew.Projects" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.ProjectReports" table="project_reports" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="users" class="ew.Users" fetch="select">
+            <column name="user_id" />
+        </many-to-one>
+        <many-to-one name="projects" class="ew.Projects" fetch="select">
+            <column name="project_id" not-null="true" />
+        </many-to-one>
+        <property name="reason" type="string">
+            <column name="reason" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="details" type="string">
+            <column name="details" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <set name="projectReportNotificationses" table="project_report_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_report_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectReportNotifications" />
+        </set>
+    </class>
+</hibernate-mapping>

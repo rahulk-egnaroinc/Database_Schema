@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ProjectReminders" table="project_reminders" schema="1">
+        <composite-id name="id" class="gsrc1.ProjectRemindersId">
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="user_id" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.TeamMembers" table="team_members" schema="1">
+        <composite-id name="id" class="gsrc1.TeamMembersId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="name" />
+            </key-property>
+            <key-property name="img" type="string">
+                <column name="img" />
+            </key-property>
+            <key-property name="totalContributedProjects" type="java.lang.Long">
+                <column name="total_contributed_projects" />
+            </key-property>
+            <key-property name="totalAmountContributed" type="big_decimal">
+                <column name="total_amount_contributed" precision="131089" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

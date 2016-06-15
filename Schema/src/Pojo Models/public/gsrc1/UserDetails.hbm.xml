@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.UserDetails" table="user_details" schema="1">
+        <composite-id name="id" class="gsrc1.UserDetailsId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="name" />
+            </key-property>
+            <key-property name="addressCity" type="string">
+                <column name="address_city" />
+            </key-property>
+            <key-property name="deactivatedAt" type="timestamp">
+                <column name="deactivated_at" length="29" />
+            </key-property>
+            <key-property name="profileImgThumbnail" type="string">
+                <column name="profile_img_thumbnail" />
+            </key-property>
+            <key-property name="facebookLink" type="string">
+                <column name="facebook_link" />
+            </key-property>
+            <key-property name="twitterUsername" type="string">
+                <column name="twitter_username" />
+            </key-property>
+            <key-property name="email" type="string">
+                <column name="email" />
+            </key-property>
+            <key-property name="totalContributedProjects" type="java.lang.Long">
+                <column name="total_contributed_projects" />
+            </key-property>
+            <key-property name="totalPublishedProjects" type="java.lang.Long">
+                <column name="total_published_projects" />
+            </key-property>
+            <key-property name="links" type="serializable">
+                <column name="links" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

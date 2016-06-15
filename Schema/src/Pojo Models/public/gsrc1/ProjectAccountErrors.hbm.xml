@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ProjectAccountErrors" table="project_account_errors" schema="1">
+        <composite-id name="id" class="gsrc1.ProjectAccountErrorsId">
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="projectAccountId" type="java.lang.Integer">
+                <column name="project_account_id" />
+            </key-property>
+            <key-property name="reason" type="string">
+                <column name="reason" />
+            </key-property>
+            <key-property name="solved" type="java.lang.Boolean">
+                <column name="solved" />
+            </key-property>
+            <key-property name="zoneTimestamp" type="timestamp">
+                <column name="zone_timestamp" length="29" />
+            </key-property>
+            <key-property name="createdAt" type="timestamp">
+                <column name="created_at" length="29" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

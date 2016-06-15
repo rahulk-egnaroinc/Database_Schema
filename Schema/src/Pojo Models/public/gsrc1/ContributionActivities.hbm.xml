@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ContributionActivities" table="contribution_activities" schema="1">
+        <composite-id name="id" class="gsrc1.ContributionActivitiesId">
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="elapsedTime" type="serializable">
+                <column name="elapsed_time" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="name" />
+            </key-property>
+            <key-property name="thumbnail" type="string">
+                <column name="thumbnail" />
+            </key-property>
+            <key-property name="projectThumbnail" type="string">
+                <column name="project_thumbnail" />
+            </key-property>
+            <key-property name="projectName" type="string">
+                <column name="project_name" />
+            </key-property>
+            <key-property name="permalink" type="string">
+                <column name="permalink" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

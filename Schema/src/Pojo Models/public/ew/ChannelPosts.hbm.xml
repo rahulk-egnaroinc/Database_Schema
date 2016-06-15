@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.ChannelPosts" table="channel_posts" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="users" class="ew.Users" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="channels" class="ew.Channels" fetch="select">
+            <column name="channel_id" not-null="true" />
+        </many-to-one>
+        <property name="title" type="string">
+            <column name="title" not-null="true" />
+        </property>
+        <property name="body" type="string">
+            <column name="body" not-null="true" />
+        </property>
+        <property name="bodyHtml" type="string">
+            <column name="body_html" not-null="true" />
+        </property>
+        <property name="visible" type="boolean">
+            <column name="visible" not-null="true" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <property name="publishedAt" type="timestamp">
+            <column name="published_at" length="29" />
+        </property>
+        <set name="channelPostNotificationses" table="channel_post_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="channel_post_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ChannelPostNotifications" />
+        </set>
+    </class>
+</hibernate-mapping>

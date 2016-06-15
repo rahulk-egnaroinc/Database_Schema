@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:05:12 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ChannelsProjects" table="channels_projects" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="channels" class="gsrc1.Channels" fetch="select">
+            <column name="channel_id" />
+        </many-to-one>
+        <many-to-one name="projects" class="gsrc1.Projects" fetch="select">
+            <column name="project_id" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

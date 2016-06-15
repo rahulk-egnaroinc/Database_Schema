@@ -1,0 +1,68 @@
+package ew;
+// Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+/**
+ * Home object for domain model class ContributionNotifications.
+ * @see ew.ContributionNotifications
+ * @author Hibernate Tools
+ */
+@Stateless
+public class ContributionNotificationsHome {
+
+	private static final Log log = LogFactory.getLog(ContributionNotificationsHome.class);
+
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	public void persist(ContributionNotifications transientInstance) {
+		log.debug("persisting ContributionNotifications instance");
+		try {
+			entityManager.persist(transientInstance);
+			log.debug("persist successful");
+		} catch (RuntimeException re) {
+			log.error("persist failed", re);
+			throw re;
+		}
+	}
+
+	public void remove(ContributionNotifications persistentInstance) {
+		log.debug("removing ContributionNotifications instance");
+		try {
+			entityManager.remove(persistentInstance);
+			log.debug("remove successful");
+		} catch (RuntimeException re) {
+			log.error("remove failed", re);
+			throw re;
+		}
+	}
+
+	public ContributionNotifications merge(ContributionNotifications detachedInstance) {
+		log.debug("merging ContributionNotifications instance");
+		try {
+			ContributionNotifications result = entityManager.merge(detachedInstance);
+			log.debug("merge successful");
+			return result;
+		} catch (RuntimeException re) {
+			log.error("merge failed", re);
+			throw re;
+		}
+	}
+
+	public ContributionNotifications findById(int id) {
+		log.debug("getting ContributionNotifications instance with id: " + id);
+		try {
+			ContributionNotifications instance = entityManager.find(ContributionNotifications.class, id);
+			log.debug("get successful");
+			return instance;
+		} catch (RuntimeException re) {
+			log.error("get failed", re);
+			throw re;
+		}
+	}
+}

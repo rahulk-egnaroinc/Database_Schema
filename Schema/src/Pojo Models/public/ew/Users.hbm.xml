@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.Users" table="users" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="countries" class="ew.Countries" fetch="select">
+            <column name="country_id" />
+        </many-to-one>
+        <many-to-one name="channels" class="ew.Channels" fetch="select">
+            <column name="channel_id" />
+        </many-to-one>
+        <property name="email" type="string">
+            <column name="email" not-null="true" unique="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" />
+        </property>
+        <property name="newsletter" type="java.lang.Boolean">
+            <column name="newsletter" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <property name="admin" type="java.lang.Boolean">
+            <column name="admin" />
+        </property>
+        <property name="addressStreet" type="string">
+            <column name="address_street" />
+        </property>
+        <property name="addressNumber" type="string">
+            <column name="address_number" />
+        </property>
+        <property name="addressComplement" type="string">
+            <column name="address_complement" />
+        </property>
+        <property name="addressNeighbourhood" type="string">
+            <column name="address_neighbourhood" />
+        </property>
+        <property name="addressCity" type="string">
+            <column name="address_city" />
+        </property>
+        <property name="addressState" type="string">
+            <column name="address_state" />
+        </property>
+        <property name="addressZipCode" type="string">
+            <column name="address_zip_code" />
+        </property>
+        <property name="phoneNumber" type="string">
+            <column name="phone_number" />
+        </property>
+        <property name="locale" type="string">
+            <column name="locale" not-null="true" />
+        </property>
+        <property name="cpf" type="string">
+            <column name="cpf" />
+        </property>
+        <property name="encryptedPassword" type="string">
+            <column name="encrypted_password" length="128" not-null="true" />
+        </property>
+        <property name="resetPasswordToken" type="string">
+            <column name="reset_password_token" unique="true" />
+        </property>
+        <property name="resetPasswordSentAt" type="timestamp">
+            <column name="reset_password_sent_at" length="29" />
+        </property>
+        <property name="rememberCreatedAt" type="timestamp">
+            <column name="remember_created_at" length="29" />
+        </property>
+        <property name="signInCount" type="java.lang.Integer">
+            <column name="sign_in_count" />
+        </property>
+        <property name="currentSignInAt" type="timestamp">
+            <column name="current_sign_in_at" length="29" />
+        </property>
+        <property name="lastSignInAt" type="timestamp">
+            <column name="last_sign_in_at" length="29" />
+        </property>
+        <property name="currentSignInIp" type="string">
+            <column name="current_sign_in_ip" />
+        </property>
+        <property name="lastSignInIp" type="string">
+            <column name="last_sign_in_ip" />
+        </property>
+        <property name="twitter" type="string">
+            <column name="twitter" />
+        </property>
+        <property name="facebookLink" type="string">
+            <column name="facebook_link" />
+        </property>
+        <property name="otherLink" type="string">
+            <column name="other_link" />
+        </property>
+        <property name="uploadedImage" type="string">
+            <column name="uploaded_image" />
+        </property>
+        <property name="moipLogin" type="string">
+            <column name="moip_login" />
+        </property>
+        <property name="stateInscription" type="string">
+            <column name="state_inscription" />
+        </property>
+        <property name="deactivatedAt" type="timestamp">
+            <column name="deactivated_at" length="29" />
+        </property>
+        <property name="reactivateToken" type="string">
+            <column name="reactivate_token" />
+        </property>
+        <property name="addressCountry" type="string">
+            <column name="address_country" />
+        </property>
+        <property name="authenticationToken" type="string">
+            <column name="authentication_token" not-null="true" unique="true" />
+        </property>
+        <property name="zeroCredits" type="java.lang.Boolean">
+            <column name="zero_credits" />
+        </property>
+        <property name="aboutHtml" type="string">
+            <column name="about_html" />
+        </property>
+        <property name="coverImage" type="string">
+            <column name="cover_image" />
+        </property>
+        <property name="permalink" type="string">
+            <column name="permalink" unique="true" />
+        </property>
+        <property name="subscribedToProjectPosts" type="java.lang.Boolean">
+            <column name="subscribed_to_project_posts" />
+        </property>
+        <property name="fullTextIndex" type="serializable">
+            <column name="full_text_index" not-null="true" />
+        </property>
+        <set name="projectNotificationses" table="project_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectNotifications" />
+        </set>
+        <set name="channelPostses" table="channel_posts" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ChannelPosts" />
+        </set>
+        <set name="userFollowNotificationses" table="user_follow_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.UserFollowNotifications" />
+        </set>
+        <set name="creditCardses" table="credit_cards" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" />
+            </key>
+            <one-to-many class="ew.CreditCards" />
+        </set>
+        <set name="categoryNotificationses" table="category_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.CategoryNotifications" />
+        </set>
+        <set name="userTransferses" table="user_transfers" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.UserTransfers" />
+        </set>
+        <set name="donationses" table="donations" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" />
+            </key>
+            <one-to-many class="ew.Donations" />
+        </set>
+        <set name="projectReportses" table="project_reports" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" />
+            </key>
+            <one-to-many class="ew.ProjectReports" />
+        </set>
+        <set name="userNotificationses" table="user_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.UserNotifications" />
+        </set>
+        <set name="projectPostNotificationses" table="project_post_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectPostNotifications" />
+        </set>
+        <set name="channelsSubscriberses" table="channels_subscribers" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ChannelsSubscribers" />
+        </set>
+        <set name="projectReportNotificationses" table="project_report_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectReportNotifications" />
+        </set>
+        <set name="bankAccountses" table="bank_accounts" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" />
+            </key>
+            <one-to-many class="ew.BankAccounts" />
+        </set>
+        <set name="contributionses" table="contributions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.Contributions" />
+        </set>
+        <set name="authorizationses" table="authorizations" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.Authorizations" />
+        </set>
+        <set name="channelPostNotificationses" table="channel_post_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ChannelPostNotifications" />
+        </set>
+        <set name="paymentTransferses" table="payment_transfers" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.PaymentTransfers" />
+        </set>
+        <set name="donationNotificationses" table="donation_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.DonationNotifications" />
+        </set>
+        <set name="userFollowsesForUserId" table="user_follows" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" />
+            </key>
+            <one-to-many class="ew.UserFollows" />
+        </set>
+        <set name="directMessageNotificationses" table="direct_message_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.DirectMessageNotifications" />
+        </set>
+        <set name="unsubscribeses" table="unsubscribes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.Unsubscribes" />
+        </set>
+        <set name="userFriendsesForFriendId" table="user_friends" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="friend_id" />
+            </key>
+            <one-to-many class="ew.UserFriends" />
+        </set>
+        <set name="userFollowsesForFollowId" table="user_follows" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="follow_id" />
+            </key>
+            <one-to-many class="ew.UserFollows" />
+        </set>
+        <set name="directMessagesesForUserId" table="direct_messages" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" />
+            </key>
+            <one-to-many class="ew.DirectMessages" />
+        </set>
+        <set name="userFriendsesForUserId" table="user_friends" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" />
+            </key>
+            <one-to-many class="ew.UserFriends" />
+        </set>
+        <set name="userTransferNotificationses" table="user_transfer_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.UserTransferNotifications" />
+        </set>
+        <set name="balanceTransactionses" table="balance_transactions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.BalanceTransactions" />
+        </set>
+        <set name="categoryFollowerses" table="category_followers" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.CategoryFollowers" />
+        </set>
+        <set name="userLinkses" table="user_links" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.UserLinks" />
+        </set>
+        <set name="projectses" table="projects" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.Projects" />
+        </set>
+        <set name="contributionNotificationses" table="contribution_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ContributionNotifications" />
+        </set>
+        <set name="rdeventses" table="rdevents" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.Rdevents" />
+        </set>
+        <set name="projectReminderses" table="project_reminders" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectReminders" />
+        </set>
+        <set name="balanceTransferses" table="balance_transfers" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.BalanceTransfers" />
+        </set>
+        <set name="directMessagesesForToUserId" table="direct_messages" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="to_user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.DirectMessages" />
+        </set>
+        <set name="projectPostses" table="project_posts" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectPosts" />
+        </set>
+        <set name="redactorAssetses" table="redactor_assets" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" />
+            </key>
+            <one-to-many class="ew.RedactorAssets" />
+        </set>
+    </class>
+</hibernate-mapping>

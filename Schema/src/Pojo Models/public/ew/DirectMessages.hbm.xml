@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.DirectMessages" table="direct_messages" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="usersByUserId" class="ew.Users" fetch="select">
+            <column name="user_id" />
+        </many-to-one>
+        <many-to-one name="usersByToUserId" class="ew.Users" fetch="select">
+            <column name="to_user_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="projects" class="ew.Projects" fetch="select">
+            <column name="project_id" />
+        </many-to-one>
+        <property name="fromEmail" type="string">
+            <column name="from_email" not-null="true" />
+        </property>
+        <property name="fromName" type="string">
+            <column name="from_name" />
+        </property>
+        <property name="content" type="string">
+            <column name="content" not-null="true" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <set name="directMessageNotificationses" table="direct_message_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="direct_message_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.DirectMessageNotifications" />
+        </set>
+    </class>
+</hibernate-mapping>

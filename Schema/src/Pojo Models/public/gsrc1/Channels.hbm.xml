@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:05:12 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.Channels" table="channels" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" not-null="true" />
+        </property>
+        <property name="permalink" type="string">
+            <column name="permalink" not-null="true" unique="true" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <property name="twitter" type="string">
+            <column name="twitter" />
+        </property>
+        <property name="facebook" type="string">
+            <column name="facebook" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="image" type="string">
+            <column name="image" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" />
+        </property>
+        <property name="videoUrl" type="string">
+            <column name="video_url" />
+        </property>
+        <property name="howItWorks" type="string">
+            <column name="how_it_works" />
+        </property>
+        <property name="howItWorksHtml" type="string">
+            <column name="how_it_works_html" />
+        </property>
+        <property name="termsUrl" type="string">
+            <column name="terms_url" />
+        </property>
+        <property name="videoEmbedUrl" type="string">
+            <column name="video_embed_url" />
+        </property>
+        <property name="gaCode" type="string">
+            <column name="ga_code" />
+        </property>
+        <set name="channelsProjectses" table="channels_projects" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="channel_id" />
+            </key>
+            <one-to-many class="gsrc1.ChannelsProjects" />
+        </set>
+        <set name="channelsSubscriberses" table="channels_subscribers" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="channel_id" not-null="true" />
+            </key>
+            <one-to-many class="gsrc1.ChannelsSubscribers" />
+        </set>
+        <set name="userses" table="users" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="channel_id" />
+            </key>
+            <one-to-many class="gsrc1.Users" />
+        </set>
+        <set name="channelPartnerses" table="channel_partners" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="channel_id" not-null="true" />
+            </key>
+            <one-to-many class="gsrc1.ChannelPartners" />
+        </set>
+        <set name="channelPostses" table="channel_posts" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="channel_id" not-null="true" />
+            </key>
+            <one-to-many class="gsrc1.ChannelPosts" />
+        </set>
+    </class>
+</hibernate-mapping>

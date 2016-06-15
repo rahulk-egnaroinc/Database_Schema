@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.Projects" table="projects" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="users" class="ew.Users" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="origins" class="ew.Origins" fetch="select">
+            <column name="origin_id" />
+        </many-to-one>
+        <many-to-one name="projectStates" class="ew.ProjectStates" fetch="select">
+            <column name="state" not-null="true" />
+        </many-to-one>
+        <many-to-one name="cities" class="ew.Cities" fetch="select">
+            <column name="city_id" />
+        </many-to-one>
+        <many-to-one name="categories" class="ew.Categories" fetch="select">
+            <column name="category_id" not-null="true" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="goal" type="big_decimal">
+            <column name="goal" precision="131089" scale="0" />
+        </property>
+        <property name="headline" type="string">
+            <column name="headline" />
+        </property>
+        <property name="videoUrl" type="string">
+            <column name="video_url" />
+        </property>
+        <property name="shortUrl" type="string">
+            <column name="short_url" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <property name="aboutHtml" type="string">
+            <column name="about_html" />
+        </property>
+        <property name="recommended" type="java.lang.Boolean">
+            <column name="recommended" />
+        </property>
+        <property name="homePageComment" type="string">
+            <column name="home_page_comment" />
+        </property>
+        <property name="permalink" type="string">
+            <column name="permalink" not-null="true" />
+        </property>
+        <property name="videoThumbnail" type="string">
+            <column name="video_thumbnail" />
+        </property>
+        <property name="onlineDays" type="java.lang.Integer">
+            <column name="online_days" />
+        </property>
+        <property name="moreLinks" type="string">
+            <column name="more_links" />
+        </property>
+        <property name="firstContributions" type="string">
+            <column name="first_contributions" />
+        </property>
+        <property name="uploadedImage" type="string">
+            <column name="uploaded_image" />
+        </property>
+        <property name="videoEmbedUrl" type="string">
+            <column name="video_embed_url" />
+        </property>
+        <property name="auditedUserName" type="string">
+            <column name="audited_user_name" />
+        </property>
+        <property name="auditedUserCpf" type="string">
+            <column name="audited_user_cpf" />
+        </property>
+        <property name="auditedUserMoipLogin" type="string">
+            <column name="audited_user_moip_login" />
+        </property>
+        <property name="auditedUserPhoneNumber" type="string">
+            <column name="audited_user_phone_number" />
+        </property>
+        <property name="trafficSources" type="string">
+            <column name="traffic_sources" />
+        </property>
+        <property name="budget" type="string">
+            <column name="budget" />
+        </property>
+        <property name="fullTextIndex" type="serializable">
+            <column name="full_text_index" />
+        </property>
+        <property name="budgetHtml" type="string">
+            <column name="budget_html" />
+        </property>
+        <property name="expiresAt" type="timestamp">
+            <column name="expires_at" length="29" />
+        </property>
+        <property name="serviceFee" type="big_decimal">
+            <column name="service_fee" precision="131089" scale="0" />
+        </property>
+        <property name="totalInstallments" type="int">
+            <column name="total_installments" not-null="true" />
+        </property>
+        <property name="mode" type="string">
+            <column name="mode" not-null="true" />
+        </property>
+        <property name="trackerSnippetHtml" type="string">
+            <column name="tracker_snippet_html" />
+        </property>
+        <set name="projectAccountses" table="project_accounts" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectAccounts" />
+        </set>
+        <set name="projectReportses" table="project_reports" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectReports" />
+        </set>
+        <set name="rdeventses" table="rdevents" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" />
+            </key>
+            <one-to-many class="ew.Rdevents" />
+        </set>
+        <set name="taggingses" table="taggings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.Taggings" />
+        </set>
+        <set name="projectPostses" table="project_posts" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectPosts" />
+        </set>
+        <set name="projectErrorses" table="project_errors" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectErrors" />
+        </set>
+        <set name="flexibleProjectses" table="flexible_projects" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="ew.FlexibleProjects" />
+        </set>
+        <set name="balanceTransactionses" table="balance_transactions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" />
+            </key>
+            <one-to-many class="ew.BalanceTransactions" />
+        </set>
+        <set name="rewardses" table="rewards" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.Rewards" />
+        </set>
+        <set name="directMessageses" table="direct_messages" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" />
+            </key>
+            <one-to-many class="ew.DirectMessages" />
+        </set>
+        <set name="channelsProjectses" table="channels_projects" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" />
+            </key>
+            <one-to-many class="ew.ChannelsProjects" />
+        </set>
+        <set name="projectNotificationses" table="project_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectNotifications" />
+        </set>
+        <set name="projectReminderses" table="project_reminders" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectReminders" />
+        </set>
+        <set name="contributionses" table="contributions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.Contributions" />
+        </set>
+        <set name="unsubscribeses" table="unsubscribes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.Unsubscribes" />
+        </set>
+        <set name="projectBudgetses" table="project_budgets" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectBudgets" />
+        </set>
+        <set name="balanceTransferses" table="balance_transfers" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" unique="true" />
+            </key>
+            <one-to-many class="ew.BalanceTransfers" />
+        </set>
+        <set name="projectTransitionses" table="project_transitions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectTransitions" />
+        </set>
+    </class>
+</hibernate-mapping>

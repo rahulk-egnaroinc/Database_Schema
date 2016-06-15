@@ -1,0 +1,2656 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<title>Hibernate Mappings - Table Info</title>
+		<link rel="stylesheet" type="text/css" href="../../assets/doc-style.css" title="Style"/>
+	</head>
+	<body>
+
+	<div id="header">
+
+		<div id="logo">
+			<a href="http://www.hibernate.org/" target="_blank">
+				<img src="../../assets/hibernate_logo.gif" alt="Hibernate"/>
+			</a>
+		</div>
+
+		<ul><li><a href="../index.html" target="_top">Tables</a></li><li><a href="../../entities/index.html" target="_top">Entities</a></li></ul>
+
+		<hr/>
+
+	</div>
+
+		<h4>Schema public</h4>
+		<h2>Table users</h2>
+
+
+		<table id="column_summary">
+			<thead>
+				<tr>
+					<th class="MainTableHeading" colspan="7">
+						Column Summary
+					</th>
+				</tr>
+				<tr>
+					<th style="width: 14%">
+						Name
+					</th>
+					<th style="width: 14%">
+						SqlType
+					</th>
+					<th style="width: 14%">
+						Length
+					</th>
+					<th style="width: 14%">
+						Precision
+					</th>
+					<th style="width: 14%">
+						Scale
+					</th>
+					<th style="width: 14%">
+						Nullable
+					</th>
+					<th style="width: 14%">
+						Unique
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td>
+							<a href="#column_detail_id">
+								id
+							</a>
+						</td>
+						<td>
+							int4
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							true
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_email">
+								email
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							true
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_name">
+								name
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_newsletter">
+								newsletter
+							</a>
+						</td>
+						<td>
+							boolean
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_created_at">
+								created_at
+							</a>
+						</td>
+						<td>
+							timestamp
+						</td>
+						<td>
+							29
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_updated_at">
+								updated_at
+							</a>
+						</td>
+						<td>
+							timestamp
+						</td>
+						<td>
+							29
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_admin">
+								admin
+							</a>
+						</td>
+						<td>
+							boolean
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_address_street">
+								address_street
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_address_number">
+								address_number
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_address_complement">
+								address_complement
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_address_neighbourhood">
+								address_neighbourhood
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_address_city">
+								address_city
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_address_state">
+								address_state
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_address_zip_code">
+								address_zip_code
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_phone_number">
+								phone_number
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_locale">
+								locale
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_cpf">
+								cpf
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_encrypted_password">
+								encrypted_password
+							</a>
+						</td>
+						<td>
+							varchar(128)
+						</td>
+						<td>
+							128
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_reset_password_token">
+								reset_password_token
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							true
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_reset_password_sent_at">
+								reset_password_sent_at
+							</a>
+						</td>
+						<td>
+							timestamp
+						</td>
+						<td>
+							29
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_remember_created_at">
+								remember_created_at
+							</a>
+						</td>
+						<td>
+							timestamp
+						</td>
+						<td>
+							29
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_sign_in_count">
+								sign_in_count
+							</a>
+						</td>
+						<td>
+							int4
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_current_sign_in_at">
+								current_sign_in_at
+							</a>
+						</td>
+						<td>
+							timestamp
+						</td>
+						<td>
+							29
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_last_sign_in_at">
+								last_sign_in_at
+							</a>
+						</td>
+						<td>
+							timestamp
+						</td>
+						<td>
+							29
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_current_sign_in_ip">
+								current_sign_in_ip
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_last_sign_in_ip">
+								last_sign_in_ip
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_twitter">
+								twitter
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_facebook_link">
+								facebook_link
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_other_link">
+								other_link
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_uploaded_image">
+								uploaded_image
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_moip_login">
+								moip_login
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_state_inscription">
+								state_inscription
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_channel_id">
+								channel_id
+							</a>
+						</td>
+						<td>
+							N/D
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_deactivated_at">
+								deactivated_at
+							</a>
+						</td>
+						<td>
+							timestamp
+						</td>
+						<td>
+							29
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_reactivate_token">
+								reactivate_token
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_address_country">
+								address_country
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_country_id">
+								country_id
+							</a>
+						</td>
+						<td>
+							N/D
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_authentication_token">
+								authentication_token
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							true
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_zero_credits">
+								zero_credits
+							</a>
+						</td>
+						<td>
+							boolean
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_about_html">
+								about_html
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_cover_image">
+								cover_image
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_permalink">
+								permalink
+							</a>
+						</td>
+						<td>
+							varchar(255)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							true
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_subscribed_to_project_posts">
+								subscribed_to_project_posts
+							</a>
+						</td>
+						<td>
+							boolean
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_full_text_index">
+								full_text_index
+							</a>
+						</td>
+						<td>
+							bytea
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+			</tbody>
+		</table>
+
+		<table id="primary_key">
+			<thead>
+				<tr>
+					<th class="MainTableHeading" colspan="2">
+						Primary Key
+					</th>
+				</tr>
+				<tr>
+					<th style="width: 50%">
+						Name
+					</th>
+					<th style="width: 50%">
+						Columns
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td>
+								users_pkey
+						</td>
+						<td>
+								<a href="#column_detail_id">
+									id
+								</a>
+						</td>
+					</tr>
+			</tbody>
+		</table>
+
+			<table id="foreign_keys">
+				<thead>
+					<tr>
+						<th class="MainTableHeading" colspan="3">
+							Foreign Keys
+						</th>
+					</tr>
+					<tr>
+						<th style="width: 33%">
+							Name
+						</th>
+						<th style="width: 33%">
+							Referenced Table
+						</th>
+						<th style="width: 33%">
+							Columns
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>
+								fk_users_country_id
+							</td>
+							<td>
+								<a href="countries.html" target="generalFrame">
+									countries
+								</a>
+							</td>
+							<td>
+									<a href="#column_detail_country_id">
+										country_id
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								fk_users_channel_id
+							</td>
+							<td>
+								<a href="channels.html" target="generalFrame">
+									channels
+								</a>
+							</td>
+							<td>
+									<a href="#column_detail_channel_id">
+										channel_id
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								FK6A68E08D6D2C783
+							</td>
+							<td>
+								<a href="channels.html" target="generalFrame">
+									channels
+								</a>
+							</td>
+							<td>
+									<a href="#column_detail_channel_id">
+										channel_id
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								FK6A68E08B0044EBC
+							</td>
+							<td>
+								<a href="countries.html" target="generalFrame">
+									countries
+								</a>
+							</td>
+							<td>
+									<a href="#column_detail_country_id">
+										country_id
+									</a>
+							</td>
+						</tr>
+				</tbody>
+			</table>
+			
+			<table id="unique_keys">
+				<thead>
+					<tr>
+						<th class="MainTableHeading" colspan="2">
+							Unique Keys
+						</th>
+					</tr>
+					<tr>
+						<th style="width: 50%">
+							Name
+						</th>
+						<th style="width: 50%">
+							Columns
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>
+								users_id_idx
+							</td>
+							<td>
+									<a href="#column_detail_id">
+										id
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								index_users_on_email
+							</td>
+							<td>
+									<a href="#column_detail_email">
+										email
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								index_users_on_authentication_token
+							</td>
+							<td>
+									<a href="#column_detail_authentication_token">
+										authentication_token
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								index_users_on_permalink
+							</td>
+							<td>
+									<a href="#column_detail_permalink">
+										permalink
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								index_users_on_reset_password_token
+							</td>
+							<td>
+									<a href="#column_detail_reset_password_token">
+										reset_password_token
+									</a>
+							</td>
+						</tr>
+				</tbody>
+			</table>
+		
+			<table id="indexes">
+				<thead>
+					<tr>
+						<th class="MainTableHeading" colspan="2">
+							Indexes
+						</th>
+					</tr>
+					<tr>
+						<th style="width: 50%">
+							Name
+						</th>
+						<th style="width: 50%">
+							Columns
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>
+								index_users_on_name
+							</td>
+							<td>
+									<a href="#column_detail_name">
+										name
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								users_full_text_index_ix
+							</td>
+							<td>
+									<a href="#column_detail_full_text_index">
+										full_text_index
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								user_admin_id_ix
+							</td>
+							<td>
+									<a href="#column_detail_id">
+										id
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								fk__users_country_id
+							</td>
+							<td>
+									<a href="#column_detail_country_id">
+										country_id
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								fk__users_channel_id
+							</td>
+							<td>
+									<a href="#column_detail_channel_id">
+										channel_id
+									</a>
+							</td>
+						</tr>
+				</tbody>
+			</table>
+		
+			<p id="column_detail" class="MainTableHeading">
+				Column Detail
+			</p>
+				
+				<h3 id="column_detail_id">id</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> int4
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> true
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_email">email</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> true
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_name">name</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_newsletter">newsletter</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> boolean
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_created_at">created_at</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> timestamp
+					</li>
+					<li>
+						<strong>Length:</strong> 29
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_updated_at">updated_at</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> timestamp
+					</li>
+					<li>
+						<strong>Length:</strong> 29
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_admin">admin</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> boolean
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_address_street">address_street</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_address_number">address_number</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_address_complement">address_complement</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_address_neighbourhood">address_neighbourhood</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_address_city">address_city</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_address_state">address_state</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_address_zip_code">address_zip_code</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_phone_number">phone_number</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_locale">locale</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_cpf">cpf</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_encrypted_password">encrypted_password</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(128)
+					</li>
+					<li>
+						<strong>Length:</strong> 128
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_reset_password_token">reset_password_token</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> true
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_reset_password_sent_at">reset_password_sent_at</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> timestamp
+					</li>
+					<li>
+						<strong>Length:</strong> 29
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_remember_created_at">remember_created_at</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> timestamp
+					</li>
+					<li>
+						<strong>Length:</strong> 29
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_sign_in_count">sign_in_count</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> int4
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_current_sign_in_at">current_sign_in_at</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> timestamp
+					</li>
+					<li>
+						<strong>Length:</strong> 29
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_last_sign_in_at">last_sign_in_at</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> timestamp
+					</li>
+					<li>
+						<strong>Length:</strong> 29
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_current_sign_in_ip">current_sign_in_ip</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_last_sign_in_ip">last_sign_in_ip</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_twitter">twitter</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_facebook_link">facebook_link</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_other_link">other_link</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_uploaded_image">uploaded_image</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_moip_login">moip_login</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_state_inscription">state_inscription</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_channel_id">channel_id</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> N/D
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_deactivated_at">deactivated_at</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> timestamp
+					</li>
+					<li>
+						<strong>Length:</strong> 29
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_reactivate_token">reactivate_token</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_address_country">address_country</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_country_id">country_id</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> N/D
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_authentication_token">authentication_token</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> true
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_zero_credits">zero_credits</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> boolean
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_about_html">about_html</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_cover_image">cover_image</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_permalink">permalink</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(255)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> true
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_subscribed_to_project_posts">subscribed_to_project_posts</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> boolean
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_full_text_index">full_text_index</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> bytea
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				
+
+	</body>
+</html>

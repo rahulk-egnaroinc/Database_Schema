@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.Rewards" table="rewards" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="projects" class="ew.Projects" fetch="select">
+            <column name="project_id" not-null="true" />
+        </many-to-one>
+        <property name="minimumValue" type="big_decimal">
+            <column name="minimum_value" precision="131089" scale="0" not-null="true" />
+        </property>
+        <property name="maximumContributions" type="java.lang.Integer">
+            <column name="maximum_contributions" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" not-null="true" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <property name="rowOrder" type="java.lang.Integer">
+            <column name="row_order" />
+        </property>
+        <property name="lastChanges" type="string">
+            <column name="last_changes" />
+        </property>
+        <property name="deliverAt" type="timestamp">
+            <column name="deliver_at" length="29" />
+        </property>
+        <set name="contributionses" table="contributions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="reward_id" />
+            </key>
+            <one-to-many class="ew.Contributions" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.CreditCards" table="credit_cards" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="users" class="ew.Users" fetch="select">
+            <column name="user_id" />
+        </many-to-one>
+        <property name="lastDigits" type="string">
+            <column name="last_digits" not-null="true" />
+        </property>
+        <property name="cardBrand" type="string">
+            <column name="card_brand" not-null="true" />
+        </property>
+        <property name="subscriptionId" type="string">
+            <column name="subscription_id" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <property name="cardKey" type="string">
+            <column name="card_key" />
+        </property>
+    </class>
+</hibernate-mapping>

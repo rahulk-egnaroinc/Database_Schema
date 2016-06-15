@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ProjectTransitions" table="project_transitions" schema="1">
+        <composite-id name="id" class="gsrc1.ProjectTransitionsId">
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="state" type="string">
+                <column name="state" />
+            </key-property>
+            <key-property name="metadata" type="string">
+                <column name="metadata" />
+            </key-property>
+            <key-property name="mostRecent" type="java.lang.Boolean">
+                <column name="most_recent" />
+            </key-property>
+            <key-property name="createdAt" type="timestamp">
+                <column name="created_at" length="29" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

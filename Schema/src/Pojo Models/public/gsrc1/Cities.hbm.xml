@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:05:12 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.Cities" table="cities" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="states" class="gsrc1.States" fetch="select">
+            <column name="state_id" not-null="true" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <set name="projectses" table="projects" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="city_id" />
+            </key>
+            <one-to-many class="gsrc1.Projects" />
+        </set>
+    </class>
+</hibernate-mapping>

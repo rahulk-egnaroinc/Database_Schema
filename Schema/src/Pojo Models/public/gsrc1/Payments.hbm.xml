@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:05:12 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.Payments" table="payments" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="contributions" class="gsrc1.Contributions" fetch="select">
+            <column name="contribution_id" not-null="true" />
+        </many-to-one>
+        <property name="state" type="string">
+            <column name="state" not-null="true" />
+        </property>
+        <property name="key" type="string">
+            <column name="key" not-null="true" unique="true" />
+        </property>
+        <property name="gateway" type="string">
+            <column name="gateway" not-null="true" />
+        </property>
+        <property name="gatewayId" type="string">
+            <column name="gateway_id" />
+        </property>
+        <property name="gatewayFee" type="big_decimal">
+            <column name="gateway_fee" precision="131089" scale="0" />
+        </property>
+        <property name="gatewayData" type="serializable">
+            <column name="gateway_data" />
+        </property>
+        <property name="paymentMethod" type="string">
+            <column name="payment_method" not-null="true" />
+        </property>
+        <property name="value" type="big_decimal">
+            <column name="value" precision="131089" scale="0" not-null="true" />
+        </property>
+        <property name="installments" type="int">
+            <column name="installments" not-null="true" />
+        </property>
+        <property name="installmentValue" type="big_decimal">
+            <column name="installment_value" precision="131089" scale="0" />
+        </property>
+        <property name="paidAt" type="timestamp">
+            <column name="paid_at" length="29" />
+        </property>
+        <property name="refusedAt" type="timestamp">
+            <column name="refused_at" length="29" />
+        </property>
+        <property name="pendingRefundAt" type="timestamp">
+            <column name="pending_refund_at" length="29" />
+        </property>
+        <property name="refundedAt" type="timestamp">
+            <column name="refunded_at" length="29" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <property name="fullTextIndex" type="serializable">
+            <column name="full_text_index" />
+        </property>
+        <property name="deletedAt" type="timestamp">
+            <column name="deleted_at" length="29" />
+        </property>
+        <property name="chargebackAt" type="timestamp">
+            <column name="chargeback_at" length="29" />
+        </property>
+        <property name="ipAddress" type="string">
+            <column name="ip_address" />
+        </property>
+        <set name="paymentNotificationses" table="payment_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="payment_id" />
+            </key>
+            <one-to-many class="gsrc1.PaymentNotifications" />
+        </set>
+        <set name="paymentTransferses" table="payment_transfers" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="payment_id" not-null="true" />
+            </key>
+            <one-to-many class="gsrc1.PaymentTransfers" />
+        </set>
+    </class>
+</hibernate-mapping>

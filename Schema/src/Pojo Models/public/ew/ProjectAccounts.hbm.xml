@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.ProjectAccounts" table="project_accounts" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="projects" class="ew.Projects" fetch="select">
+            <column name="project_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="banks" class="ew.Banks" fetch="select">
+            <column name="bank_id" />
+        </many-to-one>
+        <property name="email" type="string">
+            <column name="email" not-null="true" />
+        </property>
+        <property name="stateInscription" type="string">
+            <column name="state_inscription" />
+        </property>
+        <property name="addressStreet" type="string">
+            <column name="address_street" not-null="true" />
+        </property>
+        <property name="addressNumber" type="string">
+            <column name="address_number" not-null="true" />
+        </property>
+        <property name="addressComplement" type="string">
+            <column name="address_complement" />
+        </property>
+        <property name="addressCity" type="string">
+            <column name="address_city" not-null="true" />
+        </property>
+        <property name="addressNeighbourhood" type="string">
+            <column name="address_neighbourhood" not-null="true" />
+        </property>
+        <property name="addressState" type="string">
+            <column name="address_state" not-null="true" />
+        </property>
+        <property name="addressZipCode" type="string">
+            <column name="address_zip_code" not-null="true" />
+        </property>
+        <property name="phoneNumber" type="string">
+            <column name="phone_number" not-null="true" />
+        </property>
+        <property name="agency" type="string">
+            <column name="agency" not-null="true" />
+        </property>
+        <property name="agencyDigit" type="string">
+            <column name="agency_digit" not-null="true" />
+        </property>
+        <property name="account" type="string">
+            <column name="account" not-null="true" />
+        </property>
+        <property name="accountDigit" type="string">
+            <column name="account_digit" not-null="true" />
+        </property>
+        <property name="ownerName" type="string">
+            <column name="owner_name" not-null="true" />
+        </property>
+        <property name="ownerDocument" type="string">
+            <column name="owner_document" not-null="true" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <property name="accountType" type="string">
+            <column name="account_type" />
+        </property>
+        <set name="projectAccountErrorses" table="project_account_errors" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_account_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectAccountErrors" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.ProjectTransitions" table="project_transitions" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="projectStates" class="ew.ProjectStates" fetch="select">
+            <column name="to_state" not-null="true" />
+        </many-to-one>
+        <many-to-one name="projects" class="ew.Projects" fetch="select">
+            <column name="project_id" not-null="true" />
+        </many-to-one>
+        <property name="metadata" type="string">
+            <column name="metadata" />
+        </property>
+        <property name="sortKey" type="int">
+            <column name="sort_key" not-null="true" />
+        </property>
+        <property name="mostRecent" type="boolean">
+            <column name="most_recent" not-null="true" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" not-null="true" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

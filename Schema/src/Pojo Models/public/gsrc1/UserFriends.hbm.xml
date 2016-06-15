@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.UserFriends" table="user_friends" schema="1">
+        <composite-id name="id" class="gsrc1.UserFriendsId">
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="friendId" type="java.lang.Integer">
+                <column name="friend_id" />
+            </key-property>
+            <key-property name="following" type="java.lang.Boolean">
+                <column name="following" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="name" />
+            </key-property>
+            <key-property name="avatar" type="string">
+                <column name="avatar" />
+            </key-property>
+            <key-property name="totalContributedProjects" type="java.lang.Long">
+                <column name="total_contributed_projects" />
+            </key-property>
+            <key-property name="totalPublishedProjects" type="java.lang.Long">
+                <column name="total_published_projects" />
+            </key-property>
+            <key-property name="city" type="string">
+                <column name="city" />
+            </key-property>
+            <key-property name="state" type="string">
+                <column name="state" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

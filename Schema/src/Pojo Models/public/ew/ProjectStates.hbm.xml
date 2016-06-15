@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.ProjectStates" table="project_states" schema="public">
+        <id name="state" type="string">
+            <column name="state" />
+            <generator class="assigned" />
+        </id>
+        <property name="stateOrder" type="serializable">
+            <column name="state_order" not-null="true" />
+        </property>
+        <set name="projectTransitionses" table="project_transitions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="to_state" not-null="true" />
+            </key>
+            <one-to-many class="ew.ProjectTransitions" />
+        </set>
+        <set name="projectses" table="projects" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="state" not-null="true" />
+            </key>
+            <one-to-many class="ew.Projects" />
+        </set>
+    </class>
+</hibernate-mapping>

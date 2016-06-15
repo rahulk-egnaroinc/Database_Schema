@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.BankAccounts" table="bank_accounts" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="users" class="ew.Users" fetch="select">
+            <column name="user_id" />
+        </many-to-one>
+        <many-to-one name="banks" class="ew.Banks" fetch="select">
+            <column name="bank_id" not-null="true" />
+        </many-to-one>
+        <property name="account" type="string">
+            <column name="account" not-null="true" />
+        </property>
+        <property name="agency" type="string">
+            <column name="agency" not-null="true" />
+        </property>
+        <property name="ownerName" type="string">
+            <column name="owner_name" not-null="true" />
+        </property>
+        <property name="ownerDocument" type="string">
+            <column name="owner_document" not-null="true" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <property name="accountDigit" type="string">
+            <column name="account_digit" not-null="true" />
+        </property>
+        <property name="agencyDigit" type="string">
+            <column name="agency_digit" />
+        </property>
+    </class>
+</hibernate-mapping>

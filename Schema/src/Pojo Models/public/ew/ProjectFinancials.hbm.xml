@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.ProjectFinancials" table="project_financials" schema="public">
+        <composite-id name="id" class="ew.ProjectFinancialsId">
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="name" />
+            </key-property>
+            <key-property name="moip" type="string">
+                <column name="moip" />
+            </key-property>
+            <key-property name="goal" type="big_decimal">
+                <column name="goal" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="reached" type="big_decimal">
+                <column name="reached" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="paymentTax" type="big_decimal">
+                <column name="payment_tax" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="catarseFee" type="big_decimal">
+                <column name="catarse_fee" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="repassValue" type="big_decimal">
+                <column name="repass_value" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="expiresAt" type="string">
+                <column name="expires_at" />
+            </key-property>
+            <key-property name="contributionReport" type="string">
+                <column name="contribution_report" />
+            </key-property>
+            <key-property name="state" type="string">
+                <column name="state" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

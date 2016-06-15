@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.Contributions" table="contributions" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="users" class="ew.Users" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="origins" class="ew.Origins" fetch="select">
+            <column name="origin_id" />
+        </many-to-one>
+        <many-to-one name="rewards" class="ew.Rewards" fetch="select">
+            <column name="reward_id" />
+        </many-to-one>
+        <many-to-one name="countries" class="ew.Countries" fetch="select">
+            <column name="country_id" />
+        </many-to-one>
+        <many-to-one name="donations" class="ew.Donations" fetch="select">
+            <column name="donation_id" />
+        </many-to-one>
+        <many-to-one name="projects" class="ew.Projects" fetch="select">
+            <column name="project_id" not-null="true" />
+        </many-to-one>
+        <property name="value" type="big_decimal">
+            <column name="value" precision="131089" scale="0" not-null="true" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <property name="anonymous" type="boolean">
+            <column name="anonymous" not-null="true" />
+        </property>
+        <property name="notifiedFinish" type="java.lang.Boolean">
+            <column name="notified_finish" />
+        </property>
+        <property name="payerName" type="string">
+            <column name="payer_name" />
+        </property>
+        <property name="payerEmail" type="string">
+            <column name="payer_email" not-null="true" />
+        </property>
+        <property name="payerDocument" type="string">
+            <column name="payer_document" />
+        </property>
+        <property name="addressStreet" type="string">
+            <column name="address_street" />
+        </property>
+        <property name="addressNumber" type="string">
+            <column name="address_number" />
+        </property>
+        <property name="addressComplement" type="string">
+            <column name="address_complement" />
+        </property>
+        <property name="addressNeighbourhood" type="string">
+            <column name="address_neighbourhood" />
+        </property>
+        <property name="addressZipCode" type="string">
+            <column name="address_zip_code" />
+        </property>
+        <property name="addressCity" type="string">
+            <column name="address_city" />
+        </property>
+        <property name="addressState" type="string">
+            <column name="address_state" />
+        </property>
+        <property name="addressPhoneNumber" type="string">
+            <column name="address_phone_number" />
+        </property>
+        <property name="paymentChoice" type="string">
+            <column name="payment_choice" />
+        </property>
+        <property name="paymentServiceFee" type="big_decimal">
+            <column name="payment_service_fee" precision="131089" scale="0" />
+        </property>
+        <property name="referralLink" type="string">
+            <column name="referral_link" />
+        </property>
+        <property name="deletedAt" type="timestamp">
+            <column name="deleted_at" length="29" />
+        </property>
+        <set name="contributionNotificationses" table="contribution_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="contribution_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.ContributionNotifications" />
+        </set>
+        <set name="paymentses" table="payments" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="contribution_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.Payments" />
+        </set>
+        <set name="paymentNotificationses" table="payment_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="contribution_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.PaymentNotifications" />
+        </set>
+        <set name="balanceTransactionses" table="balance_transactions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="contribution_id" />
+            </key>
+            <one-to-many class="ew.BalanceTransactions" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ProjectAccounts" table="project_accounts" schema="1">
+        <composite-id name="id" class="gsrc1.ProjectAccountsId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="userEmail" type="string">
+                <column name="user_email" />
+            </key-property>
+            <key-property name="bankName" type="string">
+                <column name="bank_name" />
+            </key-property>
+            <key-property name="bankCode" type="string">
+                <column name="bank_code" />
+            </key-property>
+            <key-property name="agency" type="string">
+                <column name="agency" />
+            </key-property>
+            <key-property name="agencyDigit" type="string">
+                <column name="agency_digit" />
+            </key-property>
+            <key-property name="account" type="string">
+                <column name="account" />
+            </key-property>
+            <key-property name="accountDigit" type="string">
+                <column name="account_digit" />
+            </key-property>
+            <key-property name="accountType" type="string">
+                <column name="account_type" />
+            </key-property>
+            <key-property name="ownerName" type="string">
+                <column name="owner_name" />
+            </key-property>
+            <key-property name="ownerDocument" type="string">
+                <column name="owner_document" />
+            </key-property>
+            <key-property name="stateInscription" type="string">
+                <column name="state_inscription" />
+            </key-property>
+            <key-property name="addressStreet" type="string">
+                <column name="address_street" />
+            </key-property>
+            <key-property name="addressNumber" type="string">
+                <column name="address_number" />
+            </key-property>
+            <key-property name="addressComplement" type="string">
+                <column name="address_complement" />
+            </key-property>
+            <key-property name="addressNeighbourhood" type="string">
+                <column name="address_neighbourhood" />
+            </key-property>
+            <key-property name="addressCity" type="string">
+                <column name="address_city" />
+            </key-property>
+            <key-property name="addressState" type="string">
+                <column name="address_state" />
+            </key-property>
+            <key-property name="addressZipCode" type="string">
+                <column name="address_zip_code" />
+            </key-property>
+            <key-property name="phoneNumber" type="string">
+                <column name="phone_number" />
+            </key-property>
+            <key-property name="errorReason" type="string">
+                <column name="error_reason" />
+            </key-property>
+            <key-property name="transferState" type="string">
+                <column name="transfer_state" />
+            </key-property>
+            <key-property name="transferLimitDate" type="timestamp">
+                <column name="transfer_limit_date" length="29" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

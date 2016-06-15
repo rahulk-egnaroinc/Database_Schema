@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ContributionReports" table="contribution_reports" schema="1">
+        <composite-id name="id" class="gsrc1.ContributionReportsId">
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="name" />
+            </key-property>
+            <key-property name="value" type="string">
+                <column name="value" />
+            </key-property>
+            <key-property name="minimumValue" type="string">
+                <column name="minimum_value" />
+            </key-property>
+            <key-property name="description" type="string">
+                <column name="description" />
+            </key-property>
+            <key-property name="gateway" type="string">
+                <column name="gateway" />
+            </key-property>
+            <key-property name="acquirerName" type="serializable">
+                <column name="acquirer_name" />
+            </key-property>
+            <key-property name="acquirerTid" type="serializable">
+                <column name="acquirer_tid" />
+            </key-property>
+            <key-property name="paymentMethod" type="string">
+                <column name="payment_method" />
+            </key-property>
+            <key-property name="paymentServiceFee" type="string">
+                <column name="payment_service_fee" />
+            </key-property>
+            <key-property name="key" type="string">
+                <column name="key" />
+            </key-property>
+            <key-property name="createdAt" type="date">
+                <column name="created_at" length="13" />
+            </key-property>
+            <key-property name="confirmedAt" type="date">
+                <column name="confirmed_at" length="13" />
+            </key-property>
+            <key-property name="email" type="string">
+                <column name="email" />
+            </key-property>
+            <key-property name="payerEmail" type="string">
+                <column name="payer_email" />
+            </key-property>
+            <key-property name="payerName" type="string">
+                <column name="payer_name" />
+            </key-property>
+            <key-property name="cpf" type="string">
+                <column name="cpf" />
+            </key-property>
+            <key-property name="addressStreet" type="string">
+                <column name="address_street" />
+            </key-property>
+            <key-property name="addressComplement" type="string">
+                <column name="address_complement" />
+            </key-property>
+            <key-property name="addressNumber" type="string">
+                <column name="address_number" />
+            </key-property>
+            <key-property name="addressNeighbourhood" type="string">
+                <column name="address_neighbourhood" />
+            </key-property>
+            <key-property name="addressCity" type="string">
+                <column name="address_city" />
+            </key-property>
+            <key-property name="addressState" type="string">
+                <column name="address_state" />
+            </key-property>
+            <key-property name="addressZipCode" type="string">
+                <column name="address_zip_code" />
+            </key-property>
+            <key-property name="state" type="string">
+                <column name="state" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

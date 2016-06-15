@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ProjectTotals" table="project_totals" schema="1">
+        <composite-id name="id" class="gsrc1.ProjectTotalsId">
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="pledged" type="big_decimal">
+                <column name="pledged" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="paidPledged" type="big_decimal">
+                <column name="paid_pledged" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="progress" type="big_decimal">
+                <column name="progress" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="totalPaymentServiceFee" type="big_decimal">
+                <column name="total_payment_service_fee" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="paidTotalPaymentServiceFee" type="big_decimal">
+                <column name="paid_total_payment_service_fee" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="totalContributions" type="java.lang.Long">
+                <column name="total_contributions" />
+            </key-property>
+            <key-property name="totalContributors" type="java.lang.Long">
+                <column name="total_contributors" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

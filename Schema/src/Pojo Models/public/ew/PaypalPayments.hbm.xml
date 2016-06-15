@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.PaypalPayments" table="paypal_payments" schema="public">
+        <composite-id name="id" class="ew.PaypalPaymentsId">
+            <key-property name="data" type="string">
+                <column name="data" />
+            </key-property>
+            <key-property name="hora" type="string">
+                <column name="hora" />
+            </key-property>
+            <key-property name="fusohorario" type="string">
+                <column name="fusohorario" />
+            </key-property>
+            <key-property name="nome" type="string">
+                <column name="nome" />
+            </key-property>
+            <key-property name="tipo" type="string">
+                <column name="tipo" />
+            </key-property>
+            <key-property name="status" type="string">
+                <column name="status" />
+            </key-property>
+            <key-property name="moeda" type="string">
+                <column name="moeda" />
+            </key-property>
+            <key-property name="valorbruto" type="string">
+                <column name="valorbruto" />
+            </key-property>
+            <key-property name="tarifa" type="string">
+                <column name="tarifa" />
+            </key-property>
+            <key-property name="liquido" type="string">
+                <column name="liquido" />
+            </key-property>
+            <key-property name="doeMail" type="string">
+                <column name="doe_mail" />
+            </key-property>
+            <key-property name="paraeMail" type="string">
+                <column name="parae_mail" />
+            </key-property>
+            <key-property name="iddatransacao" type="string">
+                <column name="iddatransacao" />
+            </key-property>
+            <key-property name="statusdoequivalente" type="string">
+                <column name="statusdoequivalente" />
+            </key-property>
+            <key-property name="statusdoendereco" type="string">
+                <column name="statusdoendereco" />
+            </key-property>
+            <key-property name="titulodoitem" type="string">
+                <column name="titulodoitem" />
+            </key-property>
+            <key-property name="iddoitem" type="string">
+                <column name="iddoitem" />
+            </key-property>
+            <key-property name="valordoenvioemanuseio" type="string">
+                <column name="valordoenvioemanuseio" />
+            </key-property>
+            <key-property name="valordoseguro" type="string">
+                <column name="valordoseguro" />
+            </key-property>
+            <key-property name="impostosobrevendas" type="string">
+                <column name="impostosobrevendas" />
+            </key-property>
+            <key-property name="opcao1nome" type="string">
+                <column name="opcao1nome" />
+            </key-property>
+            <key-property name="opcao1valor" type="string">
+                <column name="opcao1valor" />
+            </key-property>
+            <key-property name="opcao2nome" type="string">
+                <column name="opcao2nome" />
+            </key-property>
+            <key-property name="opcao2valor" type="string">
+                <column name="opcao2valor" />
+            </key-property>
+            <key-property name="sitedoleilao" type="string">
+                <column name="sitedoleilao" />
+            </key-property>
+            <key-property name="iddocomprador" type="string">
+                <column name="iddocomprador" />
+            </key-property>
+            <key-property name="urldoitem" type="string">
+                <column name="urldoitem" />
+            </key-property>
+            <key-property name="datadetermino" type="string">
+                <column name="datadetermino" />
+            </key-property>
+            <key-property name="iddaescritura" type="string">
+                <column name="iddaescritura" />
+            </key-property>
+            <key-property name="iddafatura" type="string">
+                <column name="iddafatura" />
+            </key-property>
+            <key-property name="idtxnDerefer&#195;&#170;ncia" type="string">
+                <column name="idtxn_derefer&#195;&#170;ncia" />
+            </key-property>
+            <key-property name="numerodafatura" type="string">
+                <column name="numerodafatura" />
+            </key-property>
+            <key-property name="numeropersonalizado" type="string">
+                <column name="numeropersonalizado" />
+            </key-property>
+            <key-property name="iddorecibo" type="string">
+                <column name="iddorecibo" />
+            </key-property>
+            <key-property name="saldo" type="string">
+                <column name="saldo" />
+            </key-property>
+            <key-property name="enderecolinha1" type="string">
+                <column name="enderecolinha1" />
+            </key-property>
+            <key-property name="enderecolinha2DistritoBairro" type="string">
+                <column name="enderecolinha2_distrito_bairro" />
+            </key-property>
+            <key-property name="cidade" type="string">
+                <column name="cidade" />
+            </key-property>
+            <key-property name="estadoRegiaoTerrit&#195;&#179;rioPrefeituraRepublica" type="string">
+                <column name="estado_regiao_territ&#195;&#179;rio_prefeitura_republica" />
+            </key-property>
+            <key-property name="cep" type="string">
+                <column name="cep" />
+            </key-property>
+            <key-property name="pais" type="string">
+                <column name="pais" />
+            </key-property>
+            <key-property name="numerodotelefoneparacontato" type="string">
+                <column name="numerodotelefoneparacontato" />
+            </key-property>
+            <key-property name="extra" type="string">
+                <column name="extra" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

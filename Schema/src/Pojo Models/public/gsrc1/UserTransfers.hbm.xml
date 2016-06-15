@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:05:12 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.UserTransfers" table="user_transfers" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="users" class="gsrc1.Users" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <property name="status" type="string">
+            <column name="status" not-null="true" />
+        </property>
+        <property name="amount" type="int">
+            <column name="amount" not-null="true" />
+        </property>
+        <property name="transferData" type="serializable">
+            <column name="transfer_data" />
+        </property>
+        <property name="gatewayId" type="java.lang.Integer">
+            <column name="gateway_id" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <set name="userTransferNotificationses" table="user_transfer_notifications" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_transfer_id" not-null="true" />
+            </key>
+            <one-to-many class="gsrc1.UserTransferNotifications" />
+        </set>
+    </class>
+</hibernate-mapping>

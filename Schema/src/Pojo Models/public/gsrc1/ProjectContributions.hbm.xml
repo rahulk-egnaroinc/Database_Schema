@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ProjectContributions" table="project_contributions" schema="1">
+        <composite-id name="id" class="gsrc1.ProjectContributionsId">
+            <key-property name="anonymous" type="java.lang.Boolean">
+                <column name="anonymous" />
+            </key-property>
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="rewardId" type="big_decimal">
+                <column name="reward_id" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="id" type="big_decimal">
+                <column name="id" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="profileImgThumbnail" type="string">
+                <column name="profile_img_thumbnail" />
+            </key-property>
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="userName" type="string">
+                <column name="user_name" />
+            </key-property>
+            <key-property name="value" type="big_decimal">
+                <column name="value" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="state" type="string">
+                <column name="state" />
+            </key-property>
+            <key-property name="email" type="string">
+                <column name="email" />
+            </key-property>
+            <key-property name="reward" type="serializable">
+                <column name="reward" />
+            </key-property>
+            <key-property name="waitingPayment" type="java.lang.Boolean">
+                <column name="waiting_payment" />
+            </key-property>
+            <key-property name="isOwnerOrAdmin" type="java.lang.Boolean">
+                <column name="is_owner_or_admin" />
+            </key-property>
+            <key-property name="totalContributedProjects" type="java.lang.Long">
+                <column name="total_contributed_projects" />
+            </key-property>
+            <key-property name="createdAt" type="timestamp">
+                <column name="created_at" length="29" />
+            </key-property>
+            <key-property name="hasAnother" type="java.lang.Boolean">
+                <column name="has_another" />
+            </key-property>
+            <key-property name="fullTextIndex" type="serializable">
+                <column name="full_text_index" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ContributionReportsForProjectOwners" table="contribution_reports_for_project_owners" schema="1">
+        <composite-id name="id" class="gsrc1.ContributionReportsForProjectOwnersId">
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="rewardId" type="java.lang.Integer">
+                <column name="reward_id" />
+            </key-property>
+            <key-property name="projectOwnerId" type="java.lang.Integer">
+                <column name="project_owner_id" />
+            </key-property>
+            <key-property name="rewardDescription" type="string">
+                <column name="reward_description" />
+            </key-property>
+            <key-property name="deliverAt" type="date">
+                <column name="deliver_at" length="13" />
+            </key-property>
+            <key-property name="confirmedAt" type="date">
+                <column name="confirmed_at" length="13" />
+            </key-property>
+            <key-property name="contributionValue" type="big_decimal">
+                <column name="contribution_value" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="serviceFee" type="big_decimal">
+                <column name="service_fee" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="userEmail" type="string">
+                <column name="user_email" />
+            </key-property>
+            <key-property name="cpf" type="string">
+                <column name="cpf" />
+            </key-property>
+            <key-property name="userName" type="string">
+                <column name="user_name" />
+            </key-property>
+            <key-property name="payerEmail" type="string">
+                <column name="payer_email" />
+            </key-property>
+            <key-property name="gateway" type="string">
+                <column name="gateway" />
+            </key-property>
+            <key-property name="anonymous" type="java.lang.Boolean">
+                <column name="anonymous" />
+            </key-property>
+            <key-property name="state" type="string">
+                <column name="state" />
+            </key-property>
+            <key-property name="waitingPayment" type="java.lang.Boolean">
+                <column name="waiting_payment" />
+            </key-property>
+            <key-property name="street" type="string">
+                <column name="street" />
+            </key-property>
+            <key-property name="complement" type="string">
+                <column name="complement" />
+            </key-property>
+            <key-property name="addressNumber" type="string">
+                <column name="address_number" />
+            </key-property>
+            <key-property name="neighbourhood" type="string">
+                <column name="neighbourhood" />
+            </key-property>
+            <key-property name="city" type="string">
+                <column name="city" />
+            </key-property>
+            <key-property name="addressState" type="string">
+                <column name="address_state" />
+            </key-property>
+            <key-property name="zipCode" type="string">
+                <column name="zip_code" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

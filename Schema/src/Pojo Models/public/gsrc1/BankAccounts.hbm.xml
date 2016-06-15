@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.BankAccounts" table="bank_accounts" schema="1">
+        <composite-id name="id" class="gsrc1.BankAccountsId">
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="bankName" type="string">
+                <column name="bank_name" />
+            </key-property>
+            <key-property name="bankCode" type="string">
+                <column name="bank_code" />
+            </key-property>
+            <key-property name="account" type="string">
+                <column name="account" />
+            </key-property>
+            <key-property name="accountDigit" type="string">
+                <column name="account_digit" />
+            </key-property>
+            <key-property name="agency" type="string">
+                <column name="agency" />
+            </key-property>
+            <key-property name="agencyDigit" type="string">
+                <column name="agency_digit" />
+            </key-property>
+            <key-property name="ownerName" type="string">
+                <column name="owner_name" />
+            </key-property>
+            <key-property name="ownerDocument" type="string">
+                <column name="owner_document" />
+            </key-property>
+            <key-property name="createdAt" type="timestamp">
+                <column name="created_at" length="29" />
+            </key-property>
+            <key-property name="updatedAt" type="timestamp">
+                <column name="updated_at" length="29" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

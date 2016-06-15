@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ProjectDetails" table="project_details" schema="1">
+        <composite-id name="id" class="gsrc1.ProjectDetailsId">
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="name" />
+            </key-property>
+            <key-property name="headline" type="string">
+                <column name="headline" />
+            </key-property>
+            <key-property name="budget" type="string">
+                <column name="budget" />
+            </key-property>
+            <key-property name="goal" type="big_decimal">
+                <column name="goal" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="aboutHtml" type="string">
+                <column name="about_html" />
+            </key-property>
+            <key-property name="permalink" type="string">
+                <column name="permalink" />
+            </key-property>
+            <key-property name="videoEmbedUrl" type="string">
+                <column name="video_embed_url" />
+            </key-property>
+            <key-property name="videoUrl" type="string">
+                <column name="video_url" />
+            </key-property>
+            <key-property name="categoryName" type="string">
+                <column name="category_name" />
+            </key-property>
+            <key-property name="categoryId" type="java.lang.Integer">
+                <column name="category_id" />
+            </key-property>
+            <key-property name="originalImage" type="string">
+                <column name="original_image" />
+            </key-property>
+            <key-property name="thumbImage" type="string">
+                <column name="thumb_image" />
+            </key-property>
+            <key-property name="smallImage" type="string">
+                <column name="small_image" />
+            </key-property>
+            <key-property name="largeImage" type="string">
+                <column name="large_image" />
+            </key-property>
+            <key-property name="videoCoverImage" type="string">
+                <column name="video_cover_image" />
+            </key-property>
+            <key-property name="progress" type="big_decimal">
+                <column name="progress" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="pledged" type="big_decimal">
+                <column name="pledged" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="totalContributions" type="java.lang.Long">
+                <column name="total_contributions" />
+            </key-property>
+            <key-property name="totalContributors" type="java.lang.Long">
+                <column name="total_contributors" />
+            </key-property>
+            <key-property name="state" type="string">
+                <column name="state" />
+            </key-property>
+            <key-property name="mode" type="string">
+                <column name="mode" />
+            </key-property>
+            <key-property name="stateOrder" type="serializable">
+                <column name="state_order" />
+            </key-property>
+            <key-property name="expiresAt" type="timestamp">
+                <column name="expires_at" length="29" />
+            </key-property>
+            <key-property name="zoneExpiresAt" type="timestamp">
+                <column name="zone_expires_at" length="29" />
+            </key-property>
+            <key-property name="onlineDate" type="timestamp">
+                <column name="online_date" length="29" />
+            </key-property>
+            <key-property name="zoneOnlineDate" type="timestamp">
+                <column name="zone_online_date" length="29" />
+            </key-property>
+            <key-property name="sentToAnalysisAt" type="timestamp">
+                <column name="sent_to_analysis_at" length="29" />
+            </key-property>
+            <key-property name="isPublished" type="java.lang.Boolean">
+                <column name="is_published" />
+            </key-property>
+            <key-property name="isExpired" type="java.lang.Boolean">
+                <column name="is_expired" />
+            </key-property>
+            <key-property name="openForContributions" type="java.lang.Boolean">
+                <column name="open_for_contributions" />
+            </key-property>
+            <key-property name="onlineDays" type="java.lang.Integer">
+                <column name="online_days" />
+            </key-property>
+            <key-property name="remainingTime" type="serializable">
+                <column name="remaining_time" />
+            </key-property>
+            <key-property name="elapsedTime" type="serializable">
+                <column name="elapsed_time" />
+            </key-property>
+            <key-property name="postsCount" type="java.lang.Long">
+                <column name="posts_count" />
+            </key-property>
+            <key-property name="address" type="serializable">
+                <column name="address" />
+            </key-property>
+            <key-property name="user" type="serializable">
+                <column name="user" />
+            </key-property>
+            <key-property name="reminderCount" type="java.lang.Long">
+                <column name="reminder_count" />
+            </key-property>
+            <key-property name="isOwnerOrAdmin" type="java.lang.Boolean">
+                <column name="is_owner_or_admin" />
+            </key-property>
+            <key-property name="userSignedIn" type="java.lang.Boolean">
+                <column name="user_signed_in" />
+            </key-property>
+            <key-property name="inReminder" type="java.lang.Boolean">
+                <column name="in_reminder" />
+            </key-property>
+            <key-property name="totalPosts" type="java.lang.Long">
+                <column name="total_posts" />
+            </key-property>
+            <key-property name="isAdminRole" type="java.lang.Boolean">
+                <column name="is_admin_role" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

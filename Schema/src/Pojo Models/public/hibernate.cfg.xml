@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="Test_Seessiomn">
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.password">egnaro</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/catarse_development</property>
+        <property name="hibernate.connection.username">egnaro</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping class="gsrc1.UserDetails" />
+        <mapping class="gsrc1.ContributionActivities" />
+        <mapping class="gsrc1.Contributions" />
+        <mapping class="gsrc1.Projects" />
+        <mapping class="gsrc1.BalanceTransactions" />
+        <mapping class="gsrc1.CategoryFollowers" />
+        <mapping class="gsrc1.ContributionDetails" />
+        <mapping class="gsrc1.ProjectTransfers" />
+        <mapping class="gsrc1.ProjectScores" />
+        <mapping class="gsrc1.ContributionReports" />
+        <mapping class="gsrc1.ProjectDetails" />
+        <mapping class="gsrc1.TeamMembers" />
+        <mapping class="gsrc1.ProjectContributionsPerDay" />
+        <mapping class="gsrc1.ProjectContributionsPerLocation" />
+        <mapping class="gsrc1.Categories" />
+        <mapping class="gsrc1.ProjectAccounts" />
+        <mapping class="gsrc1.BalanceTransfers" />
+        <mapping class="gsrc1.RewardDetails" />
+        <mapping class="gsrc1.ProjectReminders" />
+        <mapping class="gsrc1.UserCredits" />
+        <mapping class="gsrc1.TeamTotals" />
+        <mapping class="gsrc1.ProjectTotals" />
+        <mapping class="gsrc1.ProjectAccountErrors" />
+        <mapping class="gsrc1.ProjectPostsDetails" />
+        <mapping class="gsrc1.BalanceTransferTransitions" />
+        <mapping class="gsrc1.ProjectContributionsPerRef" />
+        <mapping class="gsrc1.Recommendations" />
+        <mapping class="gsrc1.Users" />
+        <mapping class="gsrc1.Balances" />
+        <mapping class="gsrc1.ContributionReportsForProjectOwners" />
+        <mapping class="gsrc1.ProjectTransitions" />
+        <mapping class="gsrc1.UserFriends" />
+        <mapping class="gsrc1.DirectMessages" />
+        <mapping class="gsrc1.UserFollows" />
+        <mapping class="gsrc1.ProjectContributions" />
+        <mapping class="gsrc1.ReferralTotals" />
+        <mapping class="gsrc1.ProjectReports" />
+        <mapping class="gsrc1.Notifications" />
+        <mapping class="gsrc1.BankAccounts" />
+    </session-factory>
+</hibernate-configuration>

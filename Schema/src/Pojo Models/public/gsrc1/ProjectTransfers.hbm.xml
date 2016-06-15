@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ProjectTransfers" table="project_transfers" schema="1">
+        <composite-id name="id" class="gsrc1.ProjectTransfersId">
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="serviceFee" type="big_decimal">
+                <column name="service_fee" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="goal" type="big_decimal">
+                <column name="goal" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="pledged" type="big_decimal">
+                <column name="pledged" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="expiresAt" type="timestamp">
+                <column name="expires_at" length="29" />
+            </key-property>
+            <key-property name="finishedAt" type="timestamp">
+                <column name="finished_at" length="29" />
+            </key-property>
+            <key-property name="gatewayFee" type="big_decimal">
+                <column name="gateway_fee" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="catarseFee" type="big_decimal">
+                <column name="catarse_fee" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="catarseFeeWithoutGateway" type="big_decimal">
+                <column name="catarse_fee_without_gateway" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="amountWithoutCatarseFee" type="big_decimal">
+                <column name="amount_without_catarse_fee" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="irrfTax" type="big_decimal">
+                <column name="irrf_tax" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="pccTax" type="big_decimal">
+                <column name="pcc_tax" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="totalAmount" type="big_decimal">
+                <column name="total_amount" precision="131089" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.DbheroDataclips" table="dbhero_dataclips" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="description" type="string">
+            <column name="description" not-null="true" />
+        </property>
+        <property name="rawQuery" type="string">
+            <column name="raw_query" not-null="true" />
+        </property>
+        <property name="token" type="string">
+            <column name="token" not-null="true" unique="true" />
+        </property>
+        <property name="user" type="string">
+            <column name="user" />
+        </property>
+        <property name="private_" type="boolean">
+            <column name="private" not-null="true" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" not-null="true" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

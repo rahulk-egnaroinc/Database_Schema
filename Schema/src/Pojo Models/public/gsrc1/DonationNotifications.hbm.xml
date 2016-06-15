@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:05:12 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.DonationNotifications" table="donation_notifications" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="users" class="gsrc1.Users" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="donations" class="gsrc1.Donations" fetch="select">
+            <column name="donation_id" not-null="true" />
+        </many-to-one>
+        <property name="fromEmail" type="string">
+            <column name="from_email" not-null="true" />
+        </property>
+        <property name="fromName" type="string">
+            <column name="from_name" not-null="true" />
+        </property>
+        <property name="templateName" type="string">
+            <column name="template_name" not-null="true" />
+        </property>
+        <property name="locale" type="string">
+            <column name="locale" not-null="true" />
+        </property>
+        <property name="sentAt" type="timestamp">
+            <column name="sent_at" length="29" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <property name="deliverAt" type="timestamp">
+            <column name="deliver_at" length="29" />
+        </property>
+        <property name="cc" type="string">
+            <column name="cc" />
+        </property>
+    </class>
+</hibernate-mapping>

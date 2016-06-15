@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.FlexibleProjects" table="flexible_projects" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="flexibleProjectStates" class="ew.FlexibleProjectStates" fetch="select">
+            <column name="state" not-null="true" />
+        </many-to-one>
+        <many-to-one name="projects" class="ew.Projects" fetch="select">
+            <column name="project_id" not-null="true" unique="true" />
+        </many-to-one>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+        <set name="flexibleProjectTransitionses" table="flexible_project_transitions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="flexible_project_id" not-null="true" />
+            </key>
+            <one-to-many class="ew.FlexibleProjectTransitions" />
+        </set>
+    </class>
+</hibernate-mapping>

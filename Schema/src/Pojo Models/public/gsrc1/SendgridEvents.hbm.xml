@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:05:12 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.SendgridEvents" table="sendgrid_events" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="notificationId" type="int">
+            <column name="notification_id" not-null="true" />
+        </property>
+        <property name="notificationUser" type="int">
+            <column name="notification_user" not-null="true" />
+        </property>
+        <property name="notificationType" type="string">
+            <column name="notification_type" not-null="true" />
+        </property>
+        <property name="templateName" type="string">
+            <column name="template_name" not-null="true" />
+        </property>
+        <property name="event" type="string">
+            <column name="event" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" not-null="true" />
+        </property>
+        <property name="useragent" type="string">
+            <column name="useragent" />
+        </property>
+        <property name="sendgridData" type="serializable">
+            <column name="sendgrid_data" not-null="true" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="29" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="29" />
+        </property>
+    </class>
+</hibernate-mapping>

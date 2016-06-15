@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.Balances" table="balances" schema="1">
+        <composite-id name="id" class="gsrc1.BalancesId">
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="amount" type="big_decimal">
+                <column name="amount" precision="131089" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

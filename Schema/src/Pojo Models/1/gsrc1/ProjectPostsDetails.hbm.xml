@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.ProjectPostsDetails" table="project_posts_details" schema="1">
+        <composite-id name="id" class="gsrc1.ProjectPostsDetailsId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="projectId" type="java.lang.Integer">
+                <column name="project_id" />
+            </key-property>
+            <key-property name="isOwnerOrAdmin" type="java.lang.Boolean">
+                <column name="is_owner_or_admin" />
+            </key-property>
+            <key-property name="exclusive" type="java.lang.Boolean">
+                <column name="exclusive" />
+            </key-property>
+            <key-property name="title" type="string">
+                <column name="title" />
+            </key-property>
+            <key-property name="commentHtml" type="string">
+                <column name="comment_html" />
+            </key-property>
+            <key-property name="createdAt" type="timestamp">
+                <column name="created_at" length="29" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 11:57:11 AM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="gsrc1.TeamTotals" table="team_totals" schema="1">
+        <composite-id name="id" class="gsrc1.TeamTotalsId">
+            <key-property name="memberCount" type="java.lang.Long">
+                <column name="member_count" />
+            </key-property>
+            <key-property name="countries" type="serializable">
+                <column name="countries" />
+            </key-property>
+            <key-property name="totalContributedProjects" type="java.lang.Long">
+                <column name="total_contributed_projects" />
+            </key-property>
+            <key-property name="totalCities" type="java.lang.Long">
+                <column name="total_cities" />
+            </key-property>
+            <key-property name="totalAmount" type="big_decimal">
+                <column name="total_amount" precision="131089" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

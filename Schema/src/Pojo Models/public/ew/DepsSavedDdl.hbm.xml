@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 12:07:10 PM by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ew.DepsSavedDdl" table="deps_saved_ddl" schema="public">
+        <id name="depsId" type="int">
+            <column name="deps_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="depsViewSchema" type="string">
+            <column name="deps_view_schema" />
+        </property>
+        <property name="depsViewName" type="string">
+            <column name="deps_view_name" />
+        </property>
+        <property name="depsDdlToRun" type="string">
+            <column name="deps_ddl_to_run" />
+        </property>
+    </class>
+</hibernate-mapping>
